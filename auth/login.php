@@ -1,6 +1,9 @@
 <?php require "../includes/header.php"; ?>
 <?php require "../config/config.php"; ?>
 <?php
+ if (isset($_SESSION['username'])){
+    echo "<script>window.location.href='" . APPURL . "';</script>";
+ }
 if (isset($_POST['submit'])) {
     if (empty($_POST['email']) or empty($_POST['password'])) {
         echo "<script>alert('one or more inputs are empty');</script>";
@@ -15,7 +18,11 @@ if (isset($_POST['submit'])) {
         if ($login->rowCount() > 0) {
             //validate pass
             if (password_verify($password, $fetch['mypassword'])) {
-                echo "LOGGED IN";
+                $_SESSION['username'] = $fetch['username'];
+                $_SESSION['email'] = $fetch['email'];
+                $_SESSION['user_id'] = $fetch['id'];
+                $_SESSION['image'] = $fetch['image'];
+                echo "<script>window.location.href='" . APPURL . "';</script>";
             } else {
                 echo "<script>alert('email o password incorrect');</script>";
             }
