@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
                 ":image" => $image
             ]);
             /* header("location: " . APPURL . "/login.php"); */
+            echo "<script>window.location.href='login.php';</script>";
         } else {
             echo "<script>alert('passwrod does not match, write correct password');</script>";
         }
