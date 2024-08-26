@@ -1,9 +1,9 @@
 <?php
-if (!isset($_SERVER['HTTP_REFERER'])) {
+/* if (!isset($_SERVER['HTTP_REFERER'])) {
     //Redireeciona
     header('location:http://localhost/limpio/index.php');
     exit;
-}
+} */
 
 try {
     //host
