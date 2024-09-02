@@ -52,7 +52,7 @@ $allfruits = $fruits->fetchAll(PDO::FETCH_OBJ);
                 <div class="shop-categories owl-carousel mt-5">
                     <?php foreach ($allCategories as $category): ?>
                         <div class="item">
-                            <a href="shop.html">
+                            <a href="shop.php">
                                 <div class="media d-flex align-items-center justify-content-center">
                                     <span class="d-flex mr-2"><i class="sb-<?php echo $category->icon; ?>"></i></span>
                                     <div class="media-body">
@@ -95,7 +95,7 @@ $allfruits = $fruits->fetchAll(PDO::FETCH_OBJ);
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html"><?php echo $allmostProduct->title; ?></a>
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allmostProduct->id ?>"><?php echo $allmostProduct->title; ?></a>
                                         </h4>
                                         <div class="card-price">
                                             <!-- <span class="discount">Rp. 300.000</span> -->
@@ -142,7 +142,7 @@ $allfruits = $fruits->fetchAll(PDO::FETCH_OBJ);
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html"><?php echo $allvigi->title; ?></a>
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allvigi->id ?>"><?php echo $allvigi->title; ?></a>
                                         </h4>
                                         <div class="card-price">
                                             <!-- <span class="discount">Rp. 300.000</span> -->
@@ -189,7 +189,7 @@ $allfruits = $fruits->fetchAll(PDO::FETCH_OBJ);
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html"><?php echo $allmeat->title; ?></a>
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allmeat->id ?>"><?php echo $allmeat->title; ?></a>
                                         </h4>
                                         <div class="card-price">
                                             <!-- <span class="discount">Rp. 300.000</span> -->
@@ -236,7 +236,7 @@ $allfruits = $fruits->fetchAll(PDO::FETCH_OBJ);
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">
-                                            <a href="detail-product.html"><?php echo $allfish->title; ?></a>
+                                            <a href="<?php echo APPURL; ?>/products/detail-product.php?id=<?php echo $allfish->id ?>"><?php echo $allfish->title; ?></a>
                                         </h4>
                                         <div class="card-price">
                                             <!-- <span class="discount">Rp. 300.000</span> -->
